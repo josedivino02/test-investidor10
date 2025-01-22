@@ -13,61 +13,85 @@ body {
 }
 
 /* Header */
+/* Header */
 header {
-    background-color: #f8f9fa;
-    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 5px 10px;
     border-bottom: 1px solid #ddd;
 }
 
-header a {
+header .logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     font-size: 16px;
 }
 
-header a:hover {
-    color: #007bff;
+header nav a:hover {
+    color: #808386;
 }
 
-header .logo {
-    font-size: 20px;
-    font-weight: bold;
+.search-container button:hover {
+    background-color: transparent;
 }
 
-header .search {
+.search-container {
     display: flex;
     align-items: center;
-}
-
-header .search input {
-    padding: 5px;
-    font-size: 14px;
+    background-color: #f0f0f0;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-header .search button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    border-radius: 25px;
     padding: 5px 10px;
-    border-radius: 4px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-button {
+    border: none;
+    background: none;
     cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin-top: 2px;
+    margin-left: 25px;
 }
 
-header .search button:hover {
-    background-color: #0056b3;
+.search-button i {
+    font-size: 14px;
 }
 
-/* Main Content */
 main {
     flex: 1;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -108,7 +132,7 @@ button:hover {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 20px;
     margin: 20px 0;
     text-align: left;
     padding-left: 20px;
