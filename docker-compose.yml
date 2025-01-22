@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+    mysql:
+        image: mysql:latest
+        container_name: investidor_news
+        environment:
+            MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_DATABASE: ${DB_DATABASE}
+        volumes:
+            - ./mysql-data:/var/lib/mysql
+        ports:
+            - "${DB_PORT}:3306"
+        networks:
+            - mysql-network
+
+networks:
+    mysql-network:
+        driver: bridge
