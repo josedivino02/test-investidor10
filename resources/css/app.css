@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #007bff;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+}
+
+header .search input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+header .search button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header .search button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #f7f7f7;
+    text-align: left;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: left;
+    padding-left: 20px;
+    color: #333;
+}
+
+.message {
+    font-size: 18px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    color: #777;
+    position: sticky;
+    bottom: 0;
+}
