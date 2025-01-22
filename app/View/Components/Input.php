@@ -11,7 +11,9 @@ class Input extends Component
         public string $id = '',
         public string $name,
         public string $label = '',
-        public string $value = ''
+        public string $value = '',
+        public array $options = [],
+        public string $placeholder = ""
     )
     {
         $this->id = $id ?: $name;

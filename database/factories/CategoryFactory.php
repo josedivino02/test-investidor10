@@ -9,7 +9,7 @@ class CategoryFactory extends Factory
 {
     public function definition()
     {
-        $name = $this->faker->randomElement([
+        $names = $this->faker->shuffle([
             'Tecnologia',
             'Saúde e Bem-estar',
             'Educação',
@@ -22,10 +22,12 @@ class CategoryFactory extends Factory
             'Ciência e Inovação',
         ]);
 
+        $name = array_pop($names);
+
         return [
             "name"          => $name,
             "slug"          => Str::slug($name),
-            "description"   => $this->faker->paragraphs(3, true)
+            "description"   => $this->faker->jobTitle()
         ];
     }
 }
