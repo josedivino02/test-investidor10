@@ -2,9 +2,7 @@
     <label for="{{ $id }}">{{ $label }}</label>
 
     @if ($type === 'textarea')
-        <textarea id="{{ $id }}" name="{{ $name }}" {{ $attributes }}>
-            {{ old($name, $value) }}
-        </textarea>
+        <textarea id="{{ $id }}" name="{{ $name }}" {{ $attributes }}>{{ old($name, $value) }}</textarea>
     @elseif ($type === 'select')
         <select id="{{ $id }}" name="{{ $name }}" {{ $attributes }}>
             <option value="" disabled selected>Selecione uma opção</option>
