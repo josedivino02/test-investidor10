@@ -4,13 +4,15 @@ namespace App\Http\Controllers\Category;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
-use App\Models\Category;
+use App\Services\Category\CategoryService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Str;
-
 class CategoryController extends Controller
 {
+    public function __construct(protected CategoryService $categoryService)
+    {
+    }
+
     public function create(): View
     {
         return view("categories.create");
@@ -18,13 +20,7 @@ class CategoryController extends Controller
 
     public function store(StoreCategoryRequest $request): RedirectResponse
     {
-        $request->validated();
-
-        Category::create([
-            "name"          => $request->name,
-            "slug"          => Str::slug($request->name),
-            "description"   => $request->description,
-        ]);
+        $this->categoryService->createCategory($request->validated());
 
         return redirect()
             ->route("categories.create")
