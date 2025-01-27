@@ -6,7 +6,6 @@
             </div>
         @endif
     </div>
-    <h1>TESTE</h1>
     <div class="card-container">
         @forelse ($news as $item)
             <x-card title="{{ $item->title }}" content="{{ Str::limit($item->content, 150) }}" buttonText="Acessar" />
