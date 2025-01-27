@@ -16,7 +16,7 @@ class StoreNewsRequest extends FormRequest
         return [
             "title"             => "required|string|min:3|max:255",
             "content"           => "required|string|min:10",
-            "category"          => "required",
+            "category_id"          => "required",
             "date_published"    => "required|date",
         ];
     }
@@ -29,7 +29,7 @@ class StoreNewsRequest extends FormRequest
             "title.max"                 => "O título da notícia não deve ter mais que 255 caracteres",
             "content.required"          => "O conteúdo da notícia é obrigatório",
             "content.min"               => "O conteúdo da notícia deve ter pelo menos 10 caracteres",
-            "category.required"         => "A categoria da notícia é obrigatória",
+            "category_id.required"         => "A categoria da notícia é obrigatória",
             "date_published.required"   => "A data de publicação é obrigatória",
             "date_published.date"       => "A data de publicação deve ser do tipo data",
         ];

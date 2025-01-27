@@ -7,7 +7,7 @@
             <x-input name="subtitle" id="subtitle" label="Subtítulo" type="text" />
             <x-input name="content" id="content" label="Conteúdo" type="textarea" />
             <x-input name="date_published" id="date_published" label="Data de Publicação" type="datetime-local" />
-            <x-input name="category" id="category" label="Categoria" type="select" :options="$categories" required />
+            <x-input name="category_id" id="category_id" label="Categoria" type="select" :options="$categories" required />
 
             <x-slot name="submit">
                 <x-button.primary type="submit">Cadastrar</x-button.primary>
