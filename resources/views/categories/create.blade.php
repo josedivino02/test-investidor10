@@ -13,7 +13,7 @@
             <x-input name="description" id="description" label="Descrição" type="textarea" />
 
             <x-slot name="submit">
-                <x-button.primary type="submit">Cadastrar</x-button.primary>
+                <x-button.primary type="submit">Cadastrar Categoria</x-button.primary>
             </x-slot>
         </x-form>
     </div>
